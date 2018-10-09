@@ -31,23 +31,7 @@ if (!empty($_POST)) {
         
     }
 ?>
-<!-- <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Google Drive File Uploading</title>
-    </head>
-    <body>
 
-        <form method="post" action="?" enctype="multipart/form-data">
-        <label for="uploadedfile">Filename:</label>
-        <input type="file" name="uploadedfile" id="uploadedfile" />
-            <input type="submit" value="Submit" name="submit">
-            <input type="button" value="Logout" onclick="window.location ='Location: logout.php'" class="btn btn-danger form-control"/><br>
-        </form>
-    
-    </body>
-</html> -->
 <!DOCTYPE html>
 <html>
 <head>
