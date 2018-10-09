@@ -24,7 +24,7 @@ if (!empty($_POST)) {
         'uploadType' => 'multipart',
         'fields' => 'id'));
     
-        echo 'Done';
+        echo "<p class='btn btn-danger text-center'>Successfully Uploaded</p>";
 
     // header('location:'.$url);
     // exit;
@@ -44,16 +44,23 @@ if (!empty($_POST)) {
 <body>
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6 col-offset-3" align="center">
-                <form method="post" action="?" enctype="multipart/form-data">
-                    <label for="uploadedfile" class="form-control">Filename:</label>
-                    <input type="file" name="uploadedfile" id="uploadedfile" class="form-control" /><br/>
-                    <input type="submit" value="Submit" name="submit" class="form-control btn btn-primary"><br/>
-                    <input type="button" value="Logout" onclick="window.location ='Location: logout.php'" class="btn btn-danger form-control"/><br>
-                </form>
+            <div class="col-md-4 mx-auto">
+                <div class="card shadow my-5 p-3">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">File Upload</h5>
+                        <hr class="my-4">
+                        <div class="mt-3 mb-3">
+                            <form method="post" action="?" enctype="multipart/form-data">
+                                <label for="uploadedfile" class="form-control">Filename:</label>
+                                <input type="file" name="uploadedfile" id="uploadedfile" class="form-control" /><br/>
+                                <input type="submit" value="Submit" name="submit" class="form-control btn btn-primary"><br/>
+                                <!-- <input type="button" value="Logout" onclick="window.location ='Location: logout.php'" class="btn btn-danger form-control"/><br> -->
+                            </form>
+                      </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    
+    </div>    
 </body>
 </html>
