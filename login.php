@@ -1,11 +1,12 @@
 <?php
-    require_once "service.php";
+   
 
     if(isset($_SESSION['accessToken'])){
         header('Location: index.php');
         exit();
     }
-
+  
+    require_once "service.php";
     $loginURL = $client->createAuthUrl();
 ?>
 
@@ -26,7 +27,7 @@
                     <input type="email" placeholder="email" name="email" class="form-control" /><br>
                     <input type="password" placeholder="password" name="password" class="form-control"  /><br>
                     <input type="button" value="Login" class="btn btn-primary form-control"/><br>
-                    
+                    <input type="button" value="Login with Google" onclick="window.location ='<?php echo $loginURL ?>';" class="btn btn-danger form-control"/><br>
                 </form>
             </div>
         </div>

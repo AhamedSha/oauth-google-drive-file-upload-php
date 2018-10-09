@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 $url_array = explode('?', 'http://'.$_SERVER ['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 $url = $url_array[0];
@@ -10,12 +11,15 @@ $client->setClientId('736892032653-qkrin7ppb2bc0i7f9at9tcm16ara9qah.apps.googleu
 $client->setClientSecret('eXE5rQ7urx09p-99Zm4yi14K');
 $client->setRedirectUri($url);
 $client->setScopes(array('https://www.googleapis.com/auth/drive'));
+
 if (isset($_GET['code'])) {
     $_SESSION['accessToken'] = $client->authenticate($_GET['code']);
-    header('location: index.php');exit;
+    header('location: index.php');
+    exit();
 } elseif (!isset($_SESSION['accessToken'])) {
     $client->authenticate();
 }
+
 
 ?>
 
